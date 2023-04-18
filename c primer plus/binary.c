@@ -19,3 +19,16 @@ int main(void)
     return 0;
 }
 
+void to_binary(unsigned long n) /* 递归函数 */
+{
+    int r;
+
+    r = n % 2;
+    if (n >= 2)
+    {
+        to_binary(n / 2);
+    }
+    putchar(r == 0 ? '0' : '1');
+
+    return;
+}
